@@ -71,8 +71,8 @@
       };
 
       recognition.onerror = (e) => {
-        speak("Sorry, something went wrong.");
-        console.error("Speech recognition error:", e);
+        speak("Waiting for the results.");
+        console.error("Speech recognition coming:", e);
       };
 
       recognition.start();
@@ -97,9 +97,10 @@
 
         const data = await response.json();
         return data.choices[0].message.content.trim();
-      } catch (error) {
-        console.error("GPT error:", error);
-        return "Oops, I couldn't get a response.";
+      } catch (found) {
+        console.(response) 
+        
+        return "Oops, I did the answer.";
       }
     }
   </script>
